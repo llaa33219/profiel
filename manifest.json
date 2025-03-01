@@ -1,0 +1,23 @@
+{
+    "name": "엔트리-profiel",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "엔트리 프로필 미리보기를 띄워줍니다",
+    "icons": {
+        "16": "16.png",
+        "48": "48.png",
+        "128": "128.png"
+    },
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://playentry.org/*"],
+            "js": ["content_script.js"],
+            "css": ["style.css"],
+            "run_at": "document_start"
+        }
+    ]
+}
